@@ -1,2 +1,4 @@
-const daysOfWeek = ["mon", "tue", "wed", "thu", "fri", "sat", "sun"];
-console.log(daysOfWeek[4]);
+function sayHello(nameOfPerson, age) {
+  console.log("Hello my name is " + nameOfPerson + " and i'm " + age);
+}
+sayHello("nico", 10);
