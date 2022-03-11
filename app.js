@@ -1,21 +1,21 @@
-const title = document.querySelector("body h2");
+const body = document.querySelector("body");
 
-const superEventHandler = {
-  handleMouseEnter: function () {
-    title.innerText = "The mouse is here!";
-  },
-  handleMouseLeave: function () {
-    title.innerText = "The mouse is gone!";
-  },
-  handleWindowResize: function () {
-    title.innerText = "You just resized!";
-  },
-  handleMouseRightClick: function () {
-    title.innerText = "That was a right click!";
-  },
-};
+function resizeColorChange() {
+  let width = window.innerWidth;
+  const colorBiggest = "tomato";
+  const colorMedium = "blue";
+  const colorSmall = "purple";
+  if (width > 1000) {
+    body.classList.add(colorBiggest);
+    body.classList.remove(colorMedium, colorSmall);
+  } else if (width <= 1000 && width > 800) {
+    body.classList.remove(colorBiggest);
+    body.classList.add(colorMedium);
+    body.classList.remove(colorSmall);
+  } else {
+    body.classList.remove(colorMedium);
+    body.classList.add(colorSmall);
+  }
+}
 
-title.addEventListener("mouseenter", superEventHandler.handleMouseEnter);
-title.addEventListener("mouseleave", superEventHandler.handleMouseLeave);
-window.addEventListener("resize", superEventHandler.handleWindowResize);
-window.addEventListener("contextmenu", superEventHandler.handleMouseRightClick);
+window.addEventListener("resize", resizeColorChange);
