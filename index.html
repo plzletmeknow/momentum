@@ -9,21 +9,38 @@
   </head>
   <body>
     <h1 id="greeting" class="hidden"></h1>
-    <h2 id="clock">00:00:00</h2>
+    <h2 id="clock">00:00</h2>
     <form id="login-form" class="hidden">
       <input
+        id="name-asking"
         required
         maxlength="15"
         type="text"
         placeholder="What is your name?"
+        style="border: none; background: transparent"
       />
-      <input type="submit" value="Log In" />
+      <input
+        type="submit"
+        value="Log In"
+        style="background: transparent; border: none"
+      />
     </form>
-    <form id="todo-form">
-      <input type="text" placeholder="Write a To Do and Press Enter" required />
-    </form>
-    <ul id="todo-list"></ul>
+    <div class="todo">
+      <form id="todo-form">
+        <input
+          type="text"
+          placeholder="What is your main focus today?"
+          required
+          style="border: none; background: transparent; text-align: center"
+        />
+      </form>
+      <ul id="todo-list"></ul>
+    </div>
     <div id="quote">
+      <span></span>
+      <span></span>
+    </div>
+    <div id="weather">
       <span></span>
       <span></span>
     </div>
@@ -32,5 +49,6 @@
     <script src="js/quotes.js"></script>
     <script src="js/background.js"></script>
     <script src="js/todo.js"></script>
+    <script src="js/weather.js"></script>
   </body>
 </html>

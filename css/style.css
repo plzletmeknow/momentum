@@ -1,3 +1,109 @@
 .hidden {
   display: none;
 }
+body {
+  margin: 0;
+}
+img {
+  width: 100vw;
+  height: 100vh;
+  position: relative;
+  z-index: 1;
+}
+
+#greeting,
+#clock,
+#login-form,
+#todo-form,
+#todo-list,
+#quote,
+#weather {
+  position: absolute;
+  z-index: 2;
+}
+#greeting {
+  top: 55%;
+  left: 50%;
+  transform: translate(-50%, -55%);
+}
+#login-form {
+  top: 60%;
+  left: 50%;
+  transform: translate(-50%, -60%);
+}
+#login-form input::placeholder {
+  color: white;
+  font-size: 20px;
+  font-weight: bold;
+}
+#login-form #name-asking {
+  width: 200px;
+  height: 20px;
+}
+#login-form input {
+  color: white;
+  font-weight: bold;
+}
+#greeting {
+  font-size: 40px;
+  font-style: italic;
+  font-weight: bold;
+}
+#clock {
+  color: mediumaquamarine;
+  font-size: 70px;
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%, -40%);
+}
+
+#todo-form {
+  top: 65%;
+  left: 50%;
+  transform: translate(-50%, -65%);
+}
+#todo-form input {
+  color: white;
+  width: 300px;
+  height: 20px;
+}
+#todo-form input::placeholder {
+  color: white;
+  font-size: 20px;
+  font-weight: bold;
+  justify-content: center;
+}
+#todo-list {
+  top: 80%;
+  left: 50%;
+  transform: translate(-50%, -80%);
+  overflow-y: scroll;
+  height: 100px;
+}
+
+#todo-list button {
+  border: none;
+  background: transparent;
+}
+#todo-list span {
+  color: white;
+  font-size: large;
+}
+#quote {
+  top: 100%;
+  left: 50%;
+  transform: translate(-50%, -100%);
+  color: white;
+  font-size: 20px;
+}
+
+#weather {
+  top: 3%;
+  left: 97%;
+  transform: translate(-97%, -3%);
+}
+#weather span {
+  color: mediumaquamarine;
+  font-size: 15px;
+  font-weight: bold;
+}
